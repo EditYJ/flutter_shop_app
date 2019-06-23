@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class CategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print('分类页初始化');
     // TODO: implement build
     return Scaffold(
       body: Center(

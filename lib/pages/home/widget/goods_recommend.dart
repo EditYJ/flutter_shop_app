@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class GoodsRecommend extends StatelessWidget {
+class GoodsRecommend extends StatelessWidget{
   final List<Map> goodsRecommendData;
   GoodsRecommend({Key key, this.goodsRecommendData}) : super(key: key);
   @override
@@ -39,7 +39,7 @@ class GoodsRecommend extends StatelessWidget {
   /// 推荐列表
   Widget _recommendList() {
     return Container(
-        height: ScreenUtil().setHeight(330),
+        height: ScreenUtil().setHeight(370),
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: goodsRecommendData.length,

@@ -8,10 +8,12 @@ import 'widget/top_navigator.dart';
 import 'widget/ad_banner.dart';
 import 'widget/leader_phone.dart';
 import 'widget/goods_recommend.dart';
+import 'widget/floor_widget.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print('主页初始化');
     return Scaffold(
         appBar: AppBar(
           title: Text('商城-首页'),
@@ -39,6 +41,12 @@ class HomePage extends StatelessWidget {
     Map adBannerData = data['data']['advertesPicture'];
     Map leaderPhoneData = data['data']['shopInfo'];
     List<Map> goodsRecommendData = (data['data']['recommend'] as List).cast();
+    String floor1Title =data['data']['floor1Pic']['PICTURE_ADDRESS'];//楼层1的标题图片
+    String floor2Title =data['data']['floor2Pic']['PICTURE_ADDRESS'];//楼层1的标题图片
+    String floor3Title =data['data']['floor3Pic']['PICTURE_ADDRESS'];//楼层1的标题图片
+    List<Map> floor1 = (data['data']['floor1'] as List).cast(); //楼层1商品和图片
+    List<Map> floor2 = (data['data']['floor2'] as List).cast(); //楼层1商品和图片
+    List<Map> floor3 = (data['data']['floor3'] as List).cast(); //楼层1商品和图片
 
     return SingleChildScrollView(
       child: Column(
@@ -48,6 +56,9 @@ class HomePage extends StatelessWidget {
           ADBanner(adBannerData: adBannerData), // 广告栏
           LeaderPhone(leaderPhoneData: leaderPhoneData),  //  店长电话
           GoodsRecommend(goodsRecommendData: goodsRecommendData), //  推荐区
+          FloorWidget(titlePicAddress: floor1Title, floorContentData: floor1,),
+          FloorWidget(titlePicAddress: floor2Title, floorContentData: floor2,),
+          FloorWidget(titlePicAddress: floor3Title, floorContentData: floor3,),
         ],
     ));
   }
