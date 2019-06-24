@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// 上部导航
 class TopNavigator extends StatelessWidget {
   final List<Map> navigatorData;
   TopNavigator({Key key, this.navigatorData}) : super(key: key);

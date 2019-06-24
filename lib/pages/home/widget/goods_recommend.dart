@@ -1,7 +1,7 @@
-// 商品推荐，横向列表布局
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// 商品推荐，横向列表布局
 class GoodsRecommend extends StatelessWidget{
   final List<Map> goodsRecommendData;
   GoodsRecommend({Key key, this.goodsRecommendData}) : super(key: key);

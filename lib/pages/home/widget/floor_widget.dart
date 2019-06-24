@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// 楼层布局
 class FloorWidget extends StatelessWidget {
   final String titlePicAddress;
   final List<Map> floorContentData;
